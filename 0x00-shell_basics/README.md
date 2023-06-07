@@ -5,4 +5,5 @@
 4-listmorefiles diplays current directory contents along with hidden files
 5-listfilesdigitonly displays current directory contents with user and group IDs displayed numerically along with hidden files
 6-firstdirectory Creates a directory in tmp
-7-movethatfile Moves betty from tmp to tmp/my_first_directory 
+7-movethatfile Moves betty from tmp to tmp/my_first_directory
+8-firstdelete Deletes betty 
