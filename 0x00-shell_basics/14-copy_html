@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -n --no-clobber *.html . ..
+cp -u *.html . ..
