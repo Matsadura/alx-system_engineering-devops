@@ -11,4 +11,5 @@
 10-back Changes the working directory to the previous one
 11-list Lists the content of current directy / parent and /boot directory in this order along with hidden files
 12-file_type Prints the file type
-13-symbolic_link Adds a symbolic link to a directory 
+13-symbolic_link Adds a symbolic link to a directory
+14-copy_html copies HTML files 
