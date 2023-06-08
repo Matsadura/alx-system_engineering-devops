@@ -9,3 +9,4 @@
 8-James_Bond give no perms to owner and group but all perms to other users
 9- Sets the file perms to 753
 10- Copies attribute from Ollen file to hello
+11- Adds execute perms to directory and all of its subdir
