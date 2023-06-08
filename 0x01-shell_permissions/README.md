@@ -7,3 +7,4 @@
 6-multiple_permissions adds execute permission to owner and the group owner and read permission to other users to the file hello
 7-everybody Adds execute perms to Owner and GRoup owner and all other user
 8-James_Bond give no perms to owner and group but all perms to other users
+9- Sets the file perms to 753
