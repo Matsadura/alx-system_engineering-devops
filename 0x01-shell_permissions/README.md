@@ -11,3 +11,4 @@
 10- Copies attribute from Ollen file to hello
 11- Adds execute perms to directory and all of its subdir
 12- Makes a new directory with 751 perms
+13- Changes ownership to School
