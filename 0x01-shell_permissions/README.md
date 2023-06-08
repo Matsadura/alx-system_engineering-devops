@@ -8,3 +8,4 @@
 7-everybody Adds execute perms to Owner and GRoup owner and all other user
 8-James_Bond give no perms to owner and group but all perms to other users
 9- Sets the file perms to 753
+10- Copies attribute from Ollen file to hello
