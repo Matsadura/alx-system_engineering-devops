@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "BEST=School" >> /etc/environment | source /etc/environment
+source 6-create_local_variable
