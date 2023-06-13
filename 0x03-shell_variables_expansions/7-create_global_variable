@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "BEST=School" > best.sh | source best.sh
+echo "BEST=School" > best.sh | export BEST | source best.sh
