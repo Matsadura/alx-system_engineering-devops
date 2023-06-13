@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "BEST=School" > best.sh | export BEST | source best.sh
+echo "BEST=School" >> /etc/environment | source /etc/environment
