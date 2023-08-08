@@ -4,7 +4,7 @@
 | [0-alias](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/0-alias)     | Creates an alias, name: ``ls``, value: ``rm *``  |
 | [1-hello_you](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/1-hello_you)     | Prints ``hello user``, where user is the current Linux user.  |
 | []()      | Adds ``/action`` to the ``PATH``. ``/action`` should be the last directory the shell looks into when looking for a program.  |
-| [https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/3-paths](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/3-paths)     | Counts the number of directories in the ``PATH``.  |
+| [3-paths](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/3-paths)     | Counts the number of directories in the ``PATH``.  |
 | [4-global_variables](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/4-global_variables)     | Lists environment variables.  |
 | [5-local_variables](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/5-local_variables)      | Lists all local variables and environment variables, and functions.  |
 | [6-create_local_variable](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/6-create_local_variable)     | Creates a new local variable, name: ``BEST``, value: ``School``  |
