@@ -17,5 +17,5 @@
 | [13-print_float](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/13-print_float)      | Prints a number with two decimal places, followed by a new line, the number will be stored in the environment variable ``NUM``.  |
 | [100-decimal_to_hexadecimal](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/100-decimal_to_hexadecimal)      | 14  |
 | [101-rot13](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/101-rot13)    | Encodes and decodes text using the rot13 encryption.  |
-| []()     | Prints every other line from the input, starting with the first line.  |
-| []()     | Adds the two numbers stored in the environment variables ``WATER`` and ``STIR`` and prints the result, ``WATER`` is in base ``water``, ``STIR`` is in base ``stir``, the result is in base ``bestchol``  |
+| [102-odd](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/102-odd)     | Prints every other line from the input, starting with the first line.  |
+| [103-water_and_stir](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/103-water_and_stir)     | Adds the two numbers stored in the environment variables ``WATER`` and ``STIR`` and prints the result, ``WATER`` is in base ``water``, ``STIR`` is in base ``stir``, the result is in base ``bestchol``  |
