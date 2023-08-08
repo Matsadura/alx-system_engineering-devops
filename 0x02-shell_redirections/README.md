@@ -1,4 +1,4 @@
-# Mastering Shell Redirections: Efficiently Managing Input and Output
+# Mastering Shell Redirections and I/O Filters: Efficiently Managing Data Input, Output, and Filters
 | File      | Description |
 |-----------|-----|
 | [0-hello_world](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x02-shell_redirections/0-hello_world)     | Prints “Hello, World”, followed by a new line to the standard output.  |
