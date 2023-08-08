@@ -1,1 +1,21 @@
-expansion
+# Exploring Shell Init Files, Variables, and Expansions: Building a Strong Foundation
+| File      | Description |
+|-----------|-----|
+| [0-alias](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/0-alias)     | Creates an alias, name: ``ls``, value: ``rm *``  |
+| [1-hello_you](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/1-hello_you)     | Prints ``hello user``, where user is the current Linux user.  |
+| []()      | Adds ``/action`` to the ``PATH``. ``/action`` should be the last directory the shell looks into when looking for a program.  |
+| [https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/3-paths](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/3-paths)     | Counts the number of directories in the ``PATH``.  |
+| [4-global_variables](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/4-global_variables)     | Lists environment variables.  |
+| [5-local_variables](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/5-local_variables)      | Lists all local variables and environment variables, and functions.  |
+| [6-create_local_variable](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/6-create_local_variable)     | Creates a new local variable, name: ``BEST``, value: ``School``  |
+| [7-create_global_variable](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/7-create_global_variable)     | Creates a new global variable, name: ``BEST``, value: ``School``  |
+| [8-true_knowledge](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/8-true_knowledge)     | Prints the result of the addition of 128 with the value stored in the environment variable ``TRUEKNOWLEDGE``, followed by a new line.  |
+| [9-divide_and_rule](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/9-divide_and_rule)      | Prints the result of ``POWER`` divided by ``DIVIDE``, followed by a new line, ``POWER`` and ``DIVIDE`` are environment variables  |
+| [10-love_exponent_breath](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/10-love_exponent_breath)      | Displays the result of ``BREATH`` to the power ``LOVE``, ``BREATH`` and ``LOVE`` are environment variables  |
+| [11-binary_to_decimal](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/11-binary_to_decimal)       | Converts a number from base 2 to base 10, the number in base 2 is stored in the environment variable ``BINARY``  |
+| [12-combinations](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/12-combinations)      | Prints all possible combinations of two letters, except ``oo``, letters are lower cases, from ``a`` to ``z``, one combination per line, the output ìs alpha ordered, starting with ``aa``, does not print ``oo``  |
+| [13-print_float](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/13-print_float)      | Prints a number with two decimal places, followed by a new line, the number will be stored in the environment variable ``NUM``.  |
+| [100-decimal_to_hexadecimal](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/100-decimal_to_hexadecimal)      | 14  |
+| [101-rot13](https://github.com/Matsadura/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/101-rot13)    | Encodes and decodes text using the rot13 encryption.  |
+| []()     | Prints every other line from the input, starting with the first line.  |
+| []()     | Adds the two numbers stored in the environment variables ``WATER`` and ``STIR`` and prints the result, ``WATER`` is in base ``water``, ``STIR`` is in base ``stir``, the result is in base ``bestchol``  |
