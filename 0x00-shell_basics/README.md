@@ -1,5 +1,16 @@
 # Shell Basics: A Beginner's Guide to Command Line and Shell Scripting
 
+## Key Concepts:
+
+``Command Line Interface (CLI)``: Understand the power of interacting with your computer through text commands, providing a more direct and flexible approach than graphical user interfaces.
+
+``Shell``: Learn about shells, such as Bash, which act as a command interpreter, allowing users to execute commands and scripts. Explore the environment where you'll be typing and executing your commands.
+
+``Basic Commands``: Get hands-on experience with fundamental commands like ``ls`` (list files), ``cd`` (change directory), ``cp`` (copy), ``mv`` (move), and ``rm`` (remove). These form the building blocks of command-line navigation and file manipulation.
+
+``File System Navigation``: Delve into navigating the file system hierarchy efficiently using commands like ``pwd`` (print working directory) and ``cd``.
+
+
 | File      | Description |
 |-----------|-----|
 | [0-current_working_directory](https://github.com/Matsadura/preparation_alx/blob/master/alx-system_engineering-devops/0x00-shell_basics/0-current_working_directory)     | prints the path of the current directory  |
