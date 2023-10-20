@@ -3,13 +3,17 @@
 ### Permission Types:
 
 ``Read (r)``: Allows a user to view the contents of a file or the names of files in a directory.
+
 ``Write (w)``: Permits a user to modify the contents of a file or create, delete, and rename files in a directory.
+
 ``Execute (x)``: Enables the execution of a file (for programs or scripts) or the ability to enter a directory.
 
 ### Permission Levels:
 
 ``User (u)``: The owner of the file or directory.
+
 ``Group (g)``: Users who belong to the same group as the file or directory.
+
 ``Others (o)``: Users who fall outside the owner and group categories.
 
 ### Viewing Permissions:
@@ -19,17 +23,21 @@ The ``ls`` command, when used with the ``-l`` option, displays detailed informat
 ### Changing Permissions:
 
 The ``chmod`` command is used to change file and directory permissions.
+
 Example: ``chmod u+r file.txt`` adds read permission for the owner of the file.
+
 Permissions can also be set using octal representation, e.g., ``chmod 755 file.sh``.
 
 ### Changing Ownership:
 
 The ``chown`` command is used to change the owner of a file or directory.
+
 Example: ``chown newuser file.txt`` changes the owner of ``file.txt`` to ``newuser``.
 
 ### Changing Group:
 
 The ``chgrp`` command changes the group ownership of a file or directory.
+
 Example: ``chgrp newgroup file.txt`` changes the group of ``file.txt`` to ``newgroup``.
 
 ### Default Permissions:
