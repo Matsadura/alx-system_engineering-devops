@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script that displays the OCCURENCE_NUMBER IP HTTP_CODE of an Apache access log file
+
+awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -r
