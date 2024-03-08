@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
 #include <unistd.h>
 
 /**
@@ -20,20 +22,18 @@ int infinite_while(void)
  */
 int main(void)
 {
-	int id1, id2, id3;
+	int i;
+	pid_t ID;
 
-	id1 = fork();
-	if (id1 != 0)
+	for (i = 0; i <= 4; i++)
 	{
-		id2 = fork();
-		if (id2 != 0)
-		{
-			id3 = fork();
-			if (id3 != 0)
-				fork();
-		}
+		ID = fork();
+		if (ID == -1 || ID == 0)
+			exit(1);
+		else
+			printf("Zombie process created, PID: %d\n", ID);
 	}
-	printf("Zombie process created, PID: %d\n", getpid());
+
 	infinite_while();
 	return (0);
 }
