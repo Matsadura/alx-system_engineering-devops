@@ -8,13 +8,14 @@ case "$1" in
 		echo "$!" > /var/run/my_process.pid
 		;;
 	"stop")
-		pkill -f "manage_my_process"
+		pkill -f "./manage_my_process"
 		rm "/var/run/my_process.pid"
 		echo "manage_my_process stopped"
 		;;
 	"restart")
-		pkill -f "manage_my_process"
+		pkill -f "./manage_my_process"
 		rm "/var/run/my_process.pid"
+		sleep 2
 		./manage_my_process &
 		echo "$!" > /var/run/my_process.pid
 		echo "manage_my_process restarted"
