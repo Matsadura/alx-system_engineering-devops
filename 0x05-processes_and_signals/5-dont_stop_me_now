@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# A script that kills the "Infinity and beyond" process
+kill "$!"
