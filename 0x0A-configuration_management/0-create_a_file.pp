@@ -1,7 +1,7 @@
 # Create a file '/tmp/school', sets the owner/permissions/group and it's content
 
 file { '/tmp/school':
-file    => 'file',
+file    => 'present',
 owner   => 'www-data',
 group   => 'www-data',
 mode    => '0744',
