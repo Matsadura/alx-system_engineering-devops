@@ -1,7 +1,7 @@
 # Configures nginx webserver in a new ubuntu environment
 
 package { 'nginx':
-  ensue => installed,
+  ensure => installed,
 }
 
 file { 'index.html':
