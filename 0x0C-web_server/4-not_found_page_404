@@ -17,3 +17,5 @@ sed -i -e "/server_name _;/ {
         p
         x
 }" /etc/nginx/sites-enabled/default
+
+service nginx start
