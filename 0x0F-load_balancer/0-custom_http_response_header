@@ -1,27 +1,20 @@
 #!/usr/bin/env bash
 # Configures a brand new Ubuntu machine
-apt-get -y update
-apt-get -y install nginx
+sudo apt-get update
+sudo apt-get -y install nginx
 
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+header="add_header X-Served-By $(hostname);"
 
-sed -i -e "/server_name _;/ {
-        N
-        s/server_name _;/server_name _;\\n\\n\
-\\tlocation \\/redirect_me {\\n\
-\\t\\treturn 301 https:\\/\\/www.youtube.com\\/watch?v=QH2-TGUlwu4;\\n\
-\\t}\\n\
-\\terror_page 404 \\/custom_404.html;/
-        p
-        x
-}" /etc/nginx/sites-enabled/default
-
-
-FIND=$(grep "X-Served-By" /etc/nginx/sites-enabled/default)
-
-if [[ -z $FIND ]]; then
-	sed -i "24i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+if ! grep -q 'X-Served-By' '/etc/nginx/sites-available/default'; then
+        sudo sed -i "24i $header" /etc/nginx/sites-available/default
 fi
 
-service nginx start
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html > /dev/null
+
+sudo sed -i "24i\ rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/error_404.html > /dev/null
+
+sudo sed -i "46i\ error_page 404 /error_404.html;" /etc/nginx/sites-available/default
+
+sudo service nginx restart
