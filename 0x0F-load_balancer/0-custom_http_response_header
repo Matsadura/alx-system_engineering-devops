@@ -17,6 +17,11 @@ sed -i -e "/server_name _;/ {
         x
 }" /etc/nginx/sites-enabled/default
 
-sed -i "24i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+
+FIND=$(grep "X-Served-By" /etc/nginx/sites-enabled/default)
+
+if [[ -z $FIND ]]; then
+	sed -i "24i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+fi
 
 service nginx start
