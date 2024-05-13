@@ -1,26 +1,16 @@
 # Configures nginx webserver in a new ubuntu environment
 
-package { 'nginx':
-  ensure => installed,
+exec {'update':
+  command => '/usr/bin/apt-get update',
 }
-
-file { '/var/www/html/index.html':
-  content => 'Hello World!',
-  require => Package['nginx'],
+-> package {'nginx':
+  ensure => 'present',
 }
-
-exec { 'custom_header':
-  command  => 'sed -i "24i\ add_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default',
-  provider => 'shell',
+-> file_line { 'http_header':
+  path  => '/etc/nginx/nginx.conf',
+  match => 'http {',
+  line  => "http {\n\tadd_header X-Served-By \"${hostname}\";",
 }
-
-
-exec { 'redirect_me':
-  command  => 'sed -i "24i\ rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default',
-  provider => 'shell',
-}
-
-service { 'nginx':
-  ensure  => running,
-  require => Package['nginx'],
+-> exec {'run':
+  command => '/usr/sbin/service nginx restart',
 }
