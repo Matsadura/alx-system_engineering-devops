@@ -1,19 +1,28 @@
 #!/usr/bin/env bash
 # Configures HAproxy on a new Ubuntu machine
 
+# update the package
 sudo apt-get -y update
-sudo apt-install -y haproxy
+# install HAProxy
+sudo apt-get -y install haproxy
 
-echo -e "\nfrontend iamzidane.tech\n\
-\tbind *:80\n\
-\tmode http\n\
-\tdefault_backend web-backend\n" >> /etc/haproxy/haproxy.cfg
+# HAProxy configuration
+config="
+frontend iamzidane.tech
+  bind *:80
+  mode http
+  default_backend web_servers
 
-echo -e "\nbackend web-backend\n\
-\tbalance roundrobin\n\
-\tserver 434106-web-01 54.196.38.185:80 check\n\
-\tserver 434106-web-02 52.201.177.148:80 check" >> /etc/haproxy/haproxy.cfg
+backend web_servers
+  balance roundrobin
+  server 434106-web-01 54.196.38.185:80 check
+  server 434106-web-02 35.153.232.27:80 check
+"
 
-echo "ENABLED=1" >> /etc/default/haproxy
+# append the configurations to haproxy.cfg
+echo "$config" | sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null
+# activate the HAProxy
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy > /dev/null
 
+# restart the HAProxy
 sudo service haproxy restart
