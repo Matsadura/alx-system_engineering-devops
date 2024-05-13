@@ -17,6 +17,6 @@ sed -i -e "/server_name _;/ {
         x
 }" /etc/nginx/sites-enabled/default
 
-sed -i "58i\\\t\tadd_header X-Served-By $HOSTNAME" /etc/nginx/sites-enabled/default
+sed -i "58i\\\t\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
 
 service nginx start
