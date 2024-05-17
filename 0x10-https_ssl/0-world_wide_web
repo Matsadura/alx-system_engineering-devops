@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Digs up the info of the domain
 
 Output() {
 	sub=$(echo "$1" | cut -d '.' -f 1)
