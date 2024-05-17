@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+Output() {
+	sub=$(echo "$1" | cut -d '.' -f 1)
+	echo "$1" | awk -v subd="$sub" '{print "The subdomain", subd, "is a", $4, "record and points to", $5}'
+}
+
+if [[ $# -eq 1 ]]; then
+	sub1=$(dig "www.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1)
+	Output "$sub1"
+	sub2=$(dig "lb-01.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1)
+	Output "$sub2"
+	sub3=$(dig "web-01.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1)
+	Output "$sub3"
+	sub4=$(dig "web-02.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1)
+	Output "$sub4"
+elif [[ $# -eq 2 ]]; then
+	sub5=$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | tail -n 1)
+	Output "$sub5"
+fi
+
