@@ -2,4 +2,6 @@
 # Runs the WHOAMI command using a specific user
 if [[ "$#" != 0 ]]; then
 	sudo su "$1" -c "whoami"
+else
+	whoami
 fi
