@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # Runs the WHOAMI command using a specific user
-sudo su "$1" -c "whoami"
+if [[ "$#" != 0 ]]; then
+	sudo su "$1" -c "whoami"
+fi
