@@ -9,7 +9,7 @@ if __name__ == "__main__":
     response_users = requests.get('https://jsonplaceholder.typicode.com/users')
     employees = response_users.json()
     employees_list = [user for user in employees if user['id'] == user_id]
-    user_name = employees_list[0]['name']
+    user_name = employees_list[0].get('username')
 
     response_todos = requests.get('https://jsonplaceholder.typicode.com/todos')
     todos = response_todos.json()
