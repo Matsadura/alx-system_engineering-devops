@@ -1,17 +1,19 @@
 #!/usr/bin/python3
-""" 0-subs Module
-"""
+"""Returns the number of subscribers in a subreddit"""
 import requests
 
 
 def number_of_subscribers(subreddit):
-    """ This function return the number of subscibers of a subreddit """
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    response = requests.get(url, headers={'User-Agent': 'Custom User Agent'})
-
+    """Returns the number of subscribers"""
+    base_url = "https://api.reddit.com/"
+    api_url = f"r/{subreddit}/about"
+    headers = {
+        'User-Agent': 'Mozilla/5.0'
+    }
+    response = requests.get(base_url + api_url, headers=headers, allow_redirects=False)
     if response.status_code != 200:
         return 0
-
-    user_info = response.json()
-
-    return user_info['data']['subscribers']
+    response = response.json()
+    if 'dist' in response['data'].keys():
+        return 0
+    return response['data']['subscribers']
